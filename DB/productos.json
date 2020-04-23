@@ -1,4 +1,0 @@
-{"_id":{"$oid":"5e9eab363c15661944a63895"},"nombre":"Mini torta","precio":70,"imagen":"3olpyMDXd.jpeg","__v":0}
-{"_id":{"$oid":"5e9eab453c15661944a63896"},"nombre":"Mega torta","precio":100,"imagen":"Wc6_BOnpI.jpeg","__v":0}
-{"_id":{"$oid":"5e9eab533c15661944a63897"},"nombre":"Torta comun","precio":100,"imagen":"BlN2TQlqm.jpeg","__v":0}
-{"_id":{"$oid":"5ea136851437af25d8c8eed1"},"nombre":"Prueba","precio":300,"imagen":"MV9_-TxOT.jpeg","__v":0}
