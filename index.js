@@ -27,12 +27,12 @@ const corsOption={
         }
     }
 }
-
-
-
-
 //Crear el servidor
 const app = express();
+
+/* Habilitar Cors */
+app.use(cors(corsOption));
+
 
 /* Carpeta publica */
 app.use(express.static('uploads'));
@@ -42,8 +42,6 @@ app.use(express.static('uploads'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}))
 
-/* Habilitar Cors */
-app.use(cors(corsOption));
 
 //Rutas de la app
 app.use('/',routes());
