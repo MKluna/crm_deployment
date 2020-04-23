@@ -33,6 +33,12 @@ const app = express();
 /* Habilitar Cors */
 app.use(cors(corsOption));
 
+const url = process.env.FRONTEND_URL; // site that doesn’t send Access-Control-*
+fetch(url)
+.then(response => response.text())
+.then(contents => console.log(contents))
+.catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+
 
 /* Carpeta publica */
 app.use(express.static('uploads'));
