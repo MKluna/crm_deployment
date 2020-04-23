@@ -4,7 +4,7 @@
   "description": "REST APIS",
   "main": "index.js",
   "scripts": {
-    "desarrollo":"start": "nodemon ./index.js",
+    "desarrollo": "nodemon ./index.js",
     
     "start": "nodemon ./index.js"
   },
