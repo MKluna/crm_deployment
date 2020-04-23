@@ -31,17 +31,23 @@ const corsOption={
         }
     }
 }
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '');//NOTA: cuando publiques la aplicacion o la pagina web a donde esta () colocamos la URL permitida o los origen permitidos
+    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
 /* Habilitar Cors */
 app.use(cors(corsOption));
 //Rutas de la app
 app.use('/',routes());
 
-
+const port = 5000;
 const host = process.env.HOST || '0.0.0.0';
-const port = process.env.PORT || 5000;
+
 
 //Iniciar App
 app.listen(port,host,()=>{
-    console.log('Servidor Funcionando');
-    
+    console.log('Servidor Funcionando ',port);
 });
