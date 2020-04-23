@@ -33,8 +33,9 @@ const app = express();
 /* Habilitar Cors */
 app.use(cors(corsOption));
 
-const url = process.env.FRONTEND_URL; // site that doesn’t send Access-Control-*
-fetch(url)
+const proxyurl = process.env.FRONTEND_URL;
+const url = HOST; // site that doesn’t send Access-Control-*
+fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
 .then(response => response.text())
 .then(contents => console.log(contents))
 .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
